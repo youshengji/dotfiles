@@ -11,7 +11,9 @@ call vundle#begin()
 " Let Vundle manage Vundle, requird
 Plugin 'VundleVim/Vundle.vim'
 
-" Plugins
+" User plugins
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()
 filetype plugin indent on
@@ -101,26 +103,24 @@ set si
 set wrap
 
 """"""""""""""""""""""""""""""""""""""""""""
-" => The peak sea color sheme
+" => Plugin settings
 """"""""""""""""""""""""""""""""""""""""""""
+" The peak sea color scheme
 if ! has("gui_running")
     set t_Co=256
 endif
 set background=dark
 colors peaksea
 
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
+let g:syntastic_always_polulate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
