@@ -62,8 +62,9 @@ endtry
 " Background color
 set background=dark
 
-" Color for line numbers
-highlight LineNr ctermfg=yellow term=bold
+" highlight current line
+set cursorline
+set cursorcolumn
 
 " encoding
 set encoding=utf8
@@ -124,3 +125,15 @@ let g:syntastic_check_on_wq=0
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""
+" => other styles to override that 
+"    provided by plugins
+"""""""""""""""""""""""""""""""""""""""""""
+" Color for line numbers
+highlight LineNr ctermfg=DarkGrey term=bold
+
+" Colors for line highlighting
+highlight CursorLine cterm=NONE ctermbg=DarkGrey
+highlight CursorColumn cterm=NONE ctermbg=DarkGrey
+
