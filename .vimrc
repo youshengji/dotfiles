@@ -31,7 +31,6 @@ filetype indent on
 " Set to auto read when a file is changed from outside
 set autoread
 
-
 """"""""""""""""""""""""""""""""""""""""""""
 " => Vim user interface
 """"""""""""""""""""""""""""""""""""""""""""
@@ -52,15 +51,6 @@ set hlsearch
 """"""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlight
 syntax on
-
-" colorscheme
-try
-    colorscheme desert
-catch
-endtry
-
-" Background color
-set background=dark
 
 " highlight current line
 set cursorline
@@ -131,7 +121,7 @@ map <C-n> :NERDTreeToggle<CR>
 "    provided by plugins
 """""""""""""""""""""""""""""""""""""""""""
 " Color for line numbers
-highlight LineNr ctermfg=DarkGrey term=bold
+highlight LineNr ctermfg=DarkGrey
 
 " Colors for line highlighting
 highlight CursorLine cterm=NONE ctermbg=DarkGrey
