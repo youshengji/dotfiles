@@ -58,6 +58,7 @@ set cursorcolumn
 
 " encoding
 set encoding=utf8
+set fileencodings=utf-8,cp936,gb18030,gbk,gb2312,ucs-bom,latin-1
 
 " use Unix as standard file type
 set ffs=unix,dos,mac
@@ -124,6 +125,6 @@ map <C-n> :NERDTreeToggle<CR>
 highlight LineNr ctermfg=DarkGrey
 
 " Colors for line highlighting
-highlight CursorLine cterm=NONE ctermbg=DarkGrey
-highlight CursorColumn cterm=NONE ctermbg=DarkGrey
+highlight CursorLine cterm=NONE ctermbg=DarkGrey ctermfg=NONE
+highlight CursorColumn cterm=NONE ctermbg=DarkGrey ctermfg=NONE
 
