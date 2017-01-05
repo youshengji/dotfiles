@@ -5,6 +5,7 @@ main() {
     ln -s "$(pwd)"/.zshrc       ~/.zshrc
     ln -s "$(pwd)"/.oh-my-zsh   ~/.oh-my-zsh
     ln -s "$(pwd)"/.tmux.conf   ~/.tmux.conf
+    chsh -s /bin/zsh
 }
 
 main
