@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 " User plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
@@ -30,6 +31,33 @@ filetype indent on
 
 " Set to auto read when a file is changed from outside
 set autoread
+
+" Enable mouse
+if has('mouse')
+    set mouse=a
+endif
+
+" Configure backspace
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" Always show current position
+set ruler
+
+" Height of the command bar
+set cmdheight=2
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch
 
 """"""""""""""""""""""""""""""""""""""""""""
 " => Vim user interface
@@ -97,12 +125,13 @@ set wrap
 """"""""""""""""""""""""""""""""""""""""""""
 " => Plugin settings
 """"""""""""""""""""""""""""""""""""""""""""
-" The peak sea color scheme
+" color scheme
 if ! has("gui_running")
     set t_Co=256
 endif
+
 set background=dark
-colors peaksea
+colorscheme molokai
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -121,10 +150,4 @@ map <C-n> :NERDTreeToggle<CR>
 " => other styles to override that 
 "    provided by plugins
 """""""""""""""""""""""""""""""""""""""""""
-" Color for line numbers
-highlight LineNr ctermfg=DarkGrey
-
-" Colors for line highlighting
-highlight CursorLine cterm=NONE ctermbg=DarkGrey ctermfg=NONE
-highlight CursorColumn cterm=NONE ctermbg=DarkGrey ctermfg=NONE
 
