@@ -1,10 +1,10 @@
 main() {
-    ln -s .inputrc     ~/.inputrc
-    ln -s .vim         ~/.vim
-    ln -s .vimrc       ~/.vimrc
-    ln -s .zshrc       ~/.zshrc
-    ln -s .oh-my-zsh   ~/.oh-my-zsh
-    ln -s .tmux.conf   ~/.tmux.conf
+    ln -s "$(pwd)"/.inputrc     ~/.inputrc
+    ln -s "$(pwd)"/.vim         ~/.vim
+    ln -s "$(pwd)"/.vimrc       ~/.vimrc
+    ln -s "$(pwd)"/.zshrc       ~/.zshrc
+    ln -s "$(pwd)"/.oh-my-zsh   ~/.oh-my-zsh
+    ln -s "$(pwd)"/.tmux.conf   ~/.tmux.conf
 }
 
 main
