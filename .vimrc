@@ -13,7 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " User plugins
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
