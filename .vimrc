@@ -150,3 +150,13 @@ map <C-n> :NERDTreeToggle<CR>
 "    provided by plugins
 """""""""""""""""""""""""""""""""""""""""""
 
+
+"""""""""""""""""""""""""""""""""""""""""""
+" => new file tempaltes
+"""""""""""""""""""""""""""""""""""""""""""
+function! LoadTemplate(extension)
+    silent! :execute '0r ~/.vim/templates/' . a:extension . '.tpl'
+    silent! execute 'source ~/.vim/templates/' . a:extension . '.default.vim'
+endfunction
+autocmd BufNewFile * call LoadTemplate('%:e')
+
